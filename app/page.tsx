@@ -1,28 +1,22 @@
 
 import About from "./components/About";
-import Header from "./components/Header";
+import Achievements from "./components/Achievements";
+//import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 export default function Home() {
   return (
     <main>
 
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <About />
       <Projects />
       <Skills />
+      <Achievements />
       
-
-      <div>
-        {/* Projects */}
-      </div>
-
-      <div>
-        {/* Achievements */}
-      </div>
 
       <div>
         {/* Contact */}
