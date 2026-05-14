@@ -22,23 +22,24 @@ export default function Projects() {
         "/projects/camp-paws.png",
     },
     {
-      title: "CORAL System",
-      role: "Backend",
-      desc: "The foundational web application that ultimately inspired USSC Connect. Engineered specifically for the Luring Sirens faction during VSU Intramurals, CORAL replaces slow, paper-based attendance logging with a centralized, online check-in process. It allowed event organizers to easily track student participation and manage data in real-time.",
-      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Typescript"],
-      year: "2023",
-      image:
-        "/projects/coral-project.png",
-    },
-    {
       title: "Crisync",
       role: "Project Manager",
       desc: "Designed to enhance community safety during severe weather events, this mobile app delivers critical, real-time alerts by directly parsing PAGASA data. Because network reliability drops during disasters, the system is architected with Supabase to provide offline-resilient data synchronization, ensuring users retain access to vital preparedness information even when connectivity is lost.",
       tech: ["Flutter", "Dart", "Supabase"],
-      year: "2023",
+      year: "2026",
       image:
         "/projects/crisync.png",
     },
+    {
+      title: "CORAL System",
+      role: "Backend",
+      desc: "The foundational web application that ultimately inspired USSC Connect. Engineered specifically for the Luring Sirens faction during VSU Intramurals, CORAL replaces slow, paper-based attendance logging with a centralized, online check-in process. It allowed event organizers to easily track student participation and manage data in real-time.",
+      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Typescript"],
+      year: "2025",
+      image:
+        "/projects/coral-project.png",
+    },
+    
   ];
 
   return (
