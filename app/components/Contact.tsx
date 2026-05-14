@@ -26,14 +26,14 @@ export default function Contact() {
             </a>
             <a
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-background hover:border-foreground transition-colors"
-              href="#"
+              href="https://www.linkedin.com/in/xyryll-jay-taneo-600822269/"
             >
               <Link size={18} />
               LinkedIn
             </a>
             <a
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-background hover:border-foreground transition-colors"
-              href="#"
+              href="https://github.com/xy-real"
             >
               <GitBranch size={18} />
               GitHub
