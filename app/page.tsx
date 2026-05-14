@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
 
-      <div className = "flex justify-between items-center py-4 px-8 shadow-sm border-b border-gray-200">
+      <section id="header" className = "flex justify-between items-center py-4 px-8 shadow-sm border-b border-gray-200">
         {/* Header content */}
 
         <a className="flex font-mono items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity">
@@ -34,9 +34,9 @@ export default function Home() {
             Contact
           </a>
         </nav>
-      </div>
+      </section>
       
-      <div className="min-h-screen flex flex-col items-center justify-center">
+      <section id="hero" className="min-h-screen flex flex-col items-center justify-center">
         {/* Hero content */}
         
         <div className="font-extrabold text-6xl mb-4">
@@ -59,30 +59,26 @@ export default function Home() {
           </button>
         </div>
 
-      </div>
+      </section>
 
-      <div className="min-h-screen flex justify-center py-20 px-8">
-        <div className="max-w-6xl w-full">
-          <div className="font-mono text-2xl font-bold mb-7 flex items-center gap-2">
-            <Terminal size={24} />
-            ABOUT
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="flex flex-col gap-4">
-              <div className="text-3xl font-bold">
-                I architect modular applications that expand simple concepts into feature-rich, community-driven systems.
-              </div>
-              <div className="text-lg text-gray-600 leading-relaxed">
-                As a full-stack developer and a 3rd-year CS student at VSU, my work is rooted in making a tangible impact. When I&apos;m not serving as the Acting President of the Faculty Supreme Student Council, I&apos;m bringing production-ready platforms to life using React, Next.js, and Flutter. From disaster preparedness tools to campus management systems, every line of code is written with scalability, clean architecture, and the end-user in mind.
-              </div>
-            </div>
-            <Image src="/self.JPG" alt="Self" width={400} height={400} className="rounded-lg object-cover" />
-          </div>
+      <section id="about" className="px-8 py-20 max-w-6xl mx-auto">
+        <div className="flex items-center gap-2 mb-5">
+          <Terminal size={24} />
+          <h2 className="font-mono text-2xl font-bold">ABOUT</h2>
         </div>
 
-
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col gap-4">
+            <div className="text-3xl">
+              I architect modular applications that expand simple concepts into feature-rich, community-driven systems.
+            </div>
+            <div className="text-lg text-gray-600 leading-relaxed">
+              As a full-stack developer and a 3rd-year CS student at VSU, my work is rooted in making a tangible impact. When I&apos;m not serving as the Acting President of the Faculty Supreme Student Council, I&apos;m bringing production-ready platforms to life using React, Next.js, and Flutter. From disaster preparedness tools to campus management systems, every line of code is written with scalability, clean architecture, and the end-user in mind.
+            </div>
+          </div>
+          <Image src="/self1.JPG" alt="Self" width={400} height={400} className="rounded-lg w-full h-auto" />
+        </div>
+      </section>
 
       <div>
         {/* Skills & Technologies */}
