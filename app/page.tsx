@@ -64,25 +64,47 @@ export default function Home() {
       <section id="about" className="px-8 py-20 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 mb-5">
           <Terminal size={24} />
-          <h2 className="font-mono text-2xl font-bold">ABOUT</h2>
+          <div className="font-mono text-2xl font-bold">ABOUT</div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-4">
             <div className="text-3xl">
-              I architect modular applications that expand simple concepts into feature-rich, community-driven systems.
+              I engineer community-driven applications that combine robust architecture with real-world utility.
             </div>
             <div className="text-lg text-gray-600 leading-relaxed">
-              As a full-stack developer and a 3rd-year CS student at VSU, my work is rooted in making a tangible impact. When I&apos;m not serving as the Acting President of the Faculty Supreme Student Council, I&apos;m bringing production-ready platforms to life using React, Next.js, and Flutter. From disaster preparedness tools to campus management systems, every line of code is written with scalability, clean architecture, and the end-user in mind.
+              Balancing my roles as a full-stack developer, 3rd-year CS student, and Acting President of the VSU student council, my work is deeply rooted in solving practical problems. I use modern web and mobile technologies to build reliable platforms that prioritize scalability and the end-user experience.
             </div>
           </div>
           <Image src="/self1.JPG" alt="Self" width={400} height={400} className="rounded-lg w-full h-auto" />
         </div>
       </section>
 
-      <div>
+      <section id="skills" className="px-6 py-24 max-w-6xl mx-auto">
         {/* Skills & Technologies */}
-      </div>
+
+        <h2 className="text-sm uppercase tracking-wider font-mono mb-8">Tech Stack</h2>
+        <div className="grid md:grid-cols-3 gap-12">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Frontend</h3>
+            <p className="text-gray-600 leading-relaxed">
+              React, Next.js, TypeScript, Tailwind CSS, JavaScript
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Backend</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Node.js, Firebase, Supabase
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Tools</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Git, VS Code, Figma
+            </p>
+          </div>
+        </div>
+      </section>
 
       <div>
         {/* Projects */}
