@@ -12,15 +12,21 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 justify-center">
-          <button className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 flex items-center justify-center gap-2">
+          <a
+            href="#projects"
+            className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 flex items-center justify-center gap-2"
+          >
             View Projects
             <ArrowRight size={20} />
-          </button>
+          </a>
 
-          <button className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 flex items-center justify-center gap-2">
+          <a
+            href="#contact"
+            className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 flex items-center justify-center gap-2"
+          >
             <Mail size={20} />
             Get in touch
-          </button>
+          </a>
         </div>
       </div>
     </section>
