@@ -9,6 +9,7 @@ export default function Projects() {
       desc: "Built to streamline administrative overhead for the VSU Supreme Student Council, this platform completely digitalizes organization management. It provides admins with robust tools for tracking attendance and managing member fines, while offering students a frictionless, integrated portal to settle their dues online.",
       tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Typescript"],
       year: "2026",
+      link: "https://ussc-connect.fc-ssc.online/",
       image:
         "/projects/ussc-connect.png",
     },
@@ -18,6 +19,7 @@ export default function Projects() {
       desc: "Currently in development as a university thesis for the Faculty of Veterinary Medicine, this system tackles campus animal welfare. It utilizes crowdsourced geospatial data to help faculty and students efficiently map, monitor, and manage the health and location of stray animals within the VSU grounds.",
       tech: ["React", "Next.js", "Tailwind CSS", "Supabase", "Typescript"],
       year: "2026",
+      link: "#",
       image:
         "/projects/camp-paws.png",
     },
@@ -27,6 +29,7 @@ export default function Projects() {
       desc: "Designed to enhance community safety during severe weather events, this mobile app delivers critical, real-time alerts by directly parsing PAGASA data. Because network reliability drops during disasters, the system is architected with Supabase to provide offline-resilient data synchronization, ensuring users retain access to vital preparedness information even when connectivity is lost.",
       tech: ["Flutter", "Dart", "Supabase"],
       year: "2026",
+      link: "#",
       image:
         "/projects/crisync.png",
     },
@@ -36,6 +39,7 @@ export default function Projects() {
       desc: "The foundational web application that ultimately inspired USSC Connect. Engineered specifically for the Luring Sirens faction during VSU Intramurals, CORAL replaces slow, paper-based attendance logging with a centralized, online check-in process. It allowed event organizers to easily track student participation and manage data in real-time.",
       tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Typescript"],
       year: "2025",
+      link: "https://checka-org.vercel.app/",
       image:
         "/projects/coral-project.png",
     },
@@ -56,7 +60,7 @@ export default function Projects() {
           {projects.map((project) => (
             <a
               key={project.title}
-              href="#"
+              href={project.link}
               className="group block bg-background rounded-2xl border border-border hover:border-foreground transition-all overflow-hidden"
             >
               <div className="relative aspect-2/1 overflow-hidden bg-accent">
