@@ -1,13 +1,44 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
 
-      <div>
+      <div className = "flex justify-between py-4 px-8 shadow-sm">
         {/* Header content */}
-      </div>
 
-      <div>
+        <div>
+          Portfolio
+        </div>
+
+        <nav className = "flex space-x-4">
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#skills">  
+            Skills
+          </a>
+
+          <a href="#projects">
+            Projects
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+        </nav>
+      </div>
+      
+      <div className="min-h-screen flex flex-col items-center justify-center">
         {/* Hero content */}
+        
+        <div>
+          Xyryll Jay Taneo
+        </div>
+
+        <div>
+          Full stack developer with a passion for building systems that solve real world problems.
+        </div>
+        
       </div>
 
       <div>
