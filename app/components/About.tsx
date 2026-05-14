@@ -16,8 +16,8 @@ export default function About() {
               I engineer community-driven applications that combine robust architecture with real-world utility.
             </div>
             <div className="text-lg text-gray-600 leading-relaxed">
-              Balancing my roles as a full-stack developer, 3rd-year CS student, and Acting President of the VSU student
-              council, my work is deeply rooted in solving practical problems. I use modern web and mobile technologies
+              Balancing my roles as a full-stack developer, 3rd-year CS student, and Acting President of the VSU Faculty of Computing Supreme Student
+              ouncil, my work is deeply rooted in solving practical problems. I use modern web and mobile technologies
               to build reliable platforms that prioritize scalability and the end-user experience.
             </div>
           </div>
