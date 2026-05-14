@@ -2,7 +2,7 @@ import { ArrowRight, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen px-6 py-20 flex items-center justify-center">
+    <section id="hero" className="min-h-screen px-6 py-20 flex items-center justify-center bg-white">
       {/* Hero content */}
       <div className="max-w-3xl w-full text-center">
         <div className="font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-4">Xyryll Jay Taneo</div>

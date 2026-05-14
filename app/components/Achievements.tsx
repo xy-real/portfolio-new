@@ -30,37 +30,39 @@ export default function Achievements() {
   ];
 
   return (
-    <section id="achievements" className="px-8 py-20 max-w-6xl mx-auto">
-      <div className="flex items-center gap-2 mb-5">
-        <Trophy size = {24} />
-        <div className="font-mono text-2xl font-bold">Achievements</div>
-      </div>
+    <section id="achievements" className="px-8 py-20 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-2 mb-5">
+          <Trophy size={24} />
+          <div className="font-mono text-2xl font-bold">Achievements</div>
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {achievements.map((achievement) => (
-          <div
-            key={achievement.title}
-            className="p-6 bg-accent rounded-2xl border border-border hover:border-foreground transition-all"
-          >
-            <div className="flex items-start gap-4">
-              <div className="shrink-0 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
-                <Award className="w-5 h-5 text-background" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1">{achievement.title}</h3>
-                <p className="text-sm text-muted-foreground mb-2">
-                  {achievement.organization}
-                </p>
-                <p className="text-xs font-mono text-muted-foreground mb-3">
-                  {achievement.date}
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {achievement.description}
-                </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {achievements.map((achievement) => (
+            <div
+              key={achievement.title}
+              className="p-6 bg-accent rounded-2xl border border-border hover:border-foreground transition-all"
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
+                  <Award className="w-5 h-5 text-background" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">{achievement.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {achievement.organization}
+                  </p>
+                  <p className="text-xs font-mono text-muted-foreground mb-3">
+                    {achievement.date}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {achievement.description}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

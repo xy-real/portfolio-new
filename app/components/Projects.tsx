@@ -43,7 +43,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="px-6 py-24 bg-accent">
+    <section id="projects" className="px-6 py-24 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-5">
