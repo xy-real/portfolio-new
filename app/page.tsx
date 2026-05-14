@@ -3,6 +3,7 @@
 'use client';
 
 import { ArrowRight, Mail, Code, Terminal } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -60,15 +61,23 @@ export default function Home() {
 
       </div>
 
-      <div className="min-h-screen flex py-20 px-8">
-        <div className="max-w-4xl w-full">
-          <div className="font-mono text-2xl font-bold mb-12 flex items-center gap-2">
+      <div className="min-h-screen flex justify-center py-20 px-8">
+        <div className="max-w-6xl w-full">
+          <div className="font-mono text-2xl font-bold mb-7 flex items-center gap-2">
             <Terminal size={24} />
             ABOUT
           </div>
-
-          <div>
-            I&apos;m a full-stack developer and a 3rd-year CS student at VSU with a passion for community-driven tech. When I&apos;m not serving as the Acting President of the Faculty Supreme Student Council, I&apos;m usually architecting modular web and mobile applications. I work primarily with the React/Next.js ecosystem and Flutter, and I thrive on taking simple project concepts and expanding them into comprehensive systems that make a tangible impact on the community.
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="flex flex-col gap-4">
+              <div className="text-3xl font-bold">
+                I architect modular applications that expand simple concepts into feature-rich, community-driven systems.
+              </div>
+              <div className="text-lg text-gray-600 leading-relaxed">
+                As a full-stack developer and a 3rd-year CS student at VSU, my work is rooted in making a tangible impact. When I&apos;m not serving as the Acting President of the Faculty Supreme Student Council, I&apos;m bringing production-ready platforms to life using React, Next.js, and Flutter. From disaster preparedness tools to campus management systems, every line of code is written with scalability, clean architecture, and the end-user in mind.
+              </div>
+            </div>
+            <Image src="/self.JPG" alt="Self" width={400} height={400} className="rounded-lg object-cover" />
           </div>
         </div>
 
