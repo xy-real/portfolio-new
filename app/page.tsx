@@ -2,7 +2,7 @@
 
 'use client';
 
-import { ArrowRight, Mail, Code } from 'lucide-react';
+import { ArrowRight, Mail, Code, Terminal } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -62,10 +62,17 @@ export default function Home() {
 
       <div className="min-h-screen flex py-20 px-8">
         <div className="max-w-4xl w-full">
-          <div className="text-4xl font-bold mb-12">
+          <div className="font-mono text-2xl font-bold mb-12 flex items-center gap-2">
+            <Terminal size={24} />
             ABOUT
           </div>
+
+          <div>
+            I&apos;m a full-stack developer and a 3rd-year CS student at VSU with a passion for community-driven tech. When I&apos;m not serving as the Acting President of the Faculty Supreme Student Council, I&apos;m usually architecting modular web and mobile applications. I work primarily with the React/Next.js ecosystem and Flutter, and I thrive on taking simple project concepts and expanding them into comprehensive systems that make a tangible impact on the community.
+          </div>
         </div>
+
+
       </div>
 
       <div>
