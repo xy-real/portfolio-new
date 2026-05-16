@@ -12,8 +12,7 @@ export default function Contact() {
         <div className="flex flex-col gap-6 max-w-3xl">
           <div className="text-3xl">Let&apos;s build something impactful together.</div>
           <div className="text-lg text-gray-600 leading-relaxed">
-            If you have a project in mind, want to collaborate, or just want to connect, feel free to reach out. I
-            respond quickly and I&apos;m always open to meaningful work.
+            I&apos;m always looking for opportunities to collaborate, learn, and build alongside others. If you&apos;re putting a team together, looking for a fellow developer to brainstorm with, or just want to connect, feel free to reach out!
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
