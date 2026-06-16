@@ -29,7 +29,7 @@ export default function Projects() {
       desc: "Designed to enhance community safety during severe weather events, this mobile app delivers critical, real-time alerts by directly parsing PAGASA data. Because network reliability drops during disasters, the system is architected with Supabase to provide offline-resilient data synchronization, ensuring users retain access to vital preparedness information even when connectivity is lost.",
       tech: ["Flutter", "Dart", "Supabase"],
       year: "2026",
-      link: "#",
+      link: "https://github.com/xy-real/project_bihon",
       image:
         "/projects/crisync.png",
     },
