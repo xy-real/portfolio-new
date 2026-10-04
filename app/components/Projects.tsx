@@ -14,14 +14,24 @@ export default function Projects() {
         "/projects/ussc-connect.png",
     },
     {
-      title: "CAMP-PAWS",
-      role: "Full-Stack",
-      desc: "Currently in development as a university thesis for the Faculty of Veterinary Medicine, this system tackles campus animal welfare. It utilizes crowdsourced geospatial data to help faculty and students efficiently map, monitor, and manage the health and location of stray animals within the VSU grounds.",
-      tech: ["React", "Next.js", "Tailwind CSS", "Supabase", "Typescript"],
+      title: "VERIS System",
+      role: "Backend",
+      desc: "A general-purpose administrative frontend for the student council and a counterpart to USSC Connect. It connects to the same shared database while providing a broader interface for monitoring student eligibility, organizational fees and fines, and payment settlements across council operations.",
+      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "TypeScript"],
       year: "2026",
-      link: "#",
+      link: "https://veris.fc-ssc.online/",
       image:
-        "/projects/camp-paws.png",
+        "/projects/veris-system.png",
+    },
+    {
+      title: "VERIS Student Portal",
+      role: "Backend",
+      desc: "The student-facing side of the VERIS ecosystem. It gives students one place to review their payables from each organization, monitor their clearance status, update their records, and settle dues and fines remotely.",
+      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "TypeScript"],
+      year: "2026",
+      link: "https://veris-student-portal.fc-ssc.online/",
+      image:
+        "/projects/veris-student-portal.png",
     },
     {
       title: "Crisync",
@@ -57,53 +67,70 @@ export default function Projects() {
         </div>
 
         <div className="space-y-6">
-          {projects.map((project) => (
-            <a
-              key={project.title}
-              href={project.link}
-              className="group block bg-background rounded-2xl border border-border hover:border-foreground transition-all overflow-hidden"
-            >
-              <div className="relative aspect-2/1 overflow-hidden bg-accent">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="(min-width: 768px) 768px, 100vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+          {projects.map((project) => {
+            const cardContent = (
+              <>
+                <div className="relative aspect-2/1 overflow-hidden bg-accent">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(min-width: 768px) 768px, 100vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
 
-              <div className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-2xl font-semibold group-hover:underline">
-                        {project.title}
-                      </h3>
-                      <span className="px-3 py-1 text-xs font-mono bg-foreground text-background rounded-full">
-                        {project.role}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground mb-4">{project.desc}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 text-xs rounded-full border border-border font-mono"
-                        >
-                          {tech}
+                <div className="p-8">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-2xl font-semibold group-hover:underline">
+                          {project.title}
+                        </h3>
+                        <span className="px-3 py-1 text-xs font-mono bg-foreground text-background rounded-full">
+                          {project.role}
                         </span>
-                      ))}
+                      </div>
+                      <p className="text-muted-foreground mb-4">{project.desc}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 text-xs rounded-full border border-border font-mono"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground ml-4">
-                    <span>{project.year}</span>
-                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground ml-4">
+                      <span>{project.year}</span>
+                      {project.link && (
+                        <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          ))}
+              </>
+            );
+
+            return project.link ? (
+              <a
+                key={project.title}
+                href={project.link}
+                className="group block bg-background rounded-2xl border border-border hover:border-foreground transition-all overflow-hidden"
+              >
+                {cardContent}
+              </a>
+            ) : (
+              <article
+                key={project.title}
+                className="block bg-background rounded-2xl border border-border overflow-hidden"
+              >
+                {cardContent}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
