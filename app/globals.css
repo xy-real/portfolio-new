@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --border: #e5e5e5;
-  --accent: #f5f5f5;
-  --muted-foreground: #5f6877;
+  --background: #f4efe5;
+  --foreground: #17231a;
+  --border: #c9c0b1;
+  --accent: #e9e1d4;
+  --muted-foreground: #626b62;
   color-scheme: light;
 }
 
@@ -15,6 +15,14 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
+  --color-ink: #17231a;
+  --color-cream: #f4efe5;
+  --color-paper: #fffaf0;
+  --color-moss: #49644d;
+  --color-sage: #a8b99d;
+  --color-lime: #dce9a8;
+  --color-clay: #d47d58;
+  --color-sun: #efbd59;
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }
@@ -28,6 +36,35 @@ body {
   color: var(--foreground);
 }
 
+.font-display {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero-grid {
+  background-color: #17231a;
+  background-image:
+    radial-gradient(circle at 82% 20%, rgb(73 100 77 / 55%), transparent 29rem),
+    radial-gradient(circle at 8% 88%, rgb(212 125 88 / 22%), transparent 25rem),
+    linear-gradient(rgb(244 239 229 / 6%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(244 239 229 / 6%) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(rgb(23 35 26 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(23 35 26 / 4%) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.ink-grid {
+  background-color: #17231a;
+  background-image:
+    linear-gradient(rgb(244 239 229 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(244 239 229 / 5%) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
 section {
   scroll-margin-top: 4.5rem;
 }
@@ -38,6 +75,18 @@ section {
 }
 
 ::selection {
-  background: var(--foreground);
-  color: var(--background);
+  background: #dce9a8;
+  color: #17231a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

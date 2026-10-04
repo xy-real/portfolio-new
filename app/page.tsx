@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <a
         href="#main-content"
-        className="sr-only fixed left-4 top-4 z-60 rounded-md bg-black px-4 py-2 text-white focus:not-sr-only"
+        className="sr-only fixed left-4 top-4 z-60 rounded-md bg-lime px-4 py-2 font-semibold text-ink focus:not-sr-only"
       >
         Skip to content
       </a>
@@ -21,8 +21,8 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
-        <Skills />
         <Achievements />
+        <Skills />
         <Contact />
       </main>
     </>

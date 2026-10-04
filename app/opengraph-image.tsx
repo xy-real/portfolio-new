@@ -13,8 +13,8 @@ export default function OpenGraphImage() {
       <div
         style={{
           alignItems: "stretch",
-          background: "#f5f5f5",
-          color: "#171717",
+          background: "#17231a",
+          color: "#f4efe5",
           display: "flex",
           height: "100%",
           padding: "54px",
@@ -23,8 +23,8 @@ export default function OpenGraphImage() {
       >
         <div
           style={{
-            background: "#ffffff",
-            border: "2px solid #171717",
+            background: "#17231a",
+            border: "2px solid #dce9a8",
             borderRadius: "30px",
             display: "flex",
             flexDirection: "column",
@@ -33,7 +33,7 @@ export default function OpenGraphImage() {
             width: "100%",
           }}
         >
-          <div style={{ display: "flex", fontFamily: "monospace", fontSize: 28, fontWeight: 700 }}>
+          <div style={{ color: "#dce9a8", display: "flex", fontFamily: "monospace", fontSize: 28, fontWeight: 700 }}>
             &lt;/&gt; xy-real
           </div>
 
@@ -41,12 +41,12 @@ export default function OpenGraphImage() {
             <div style={{ display: "flex", fontSize: 72, fontWeight: 800, letterSpacing: "-3px" }}>
               Xyryll Jay Taneo
             </div>
-            <div style={{ color: "#5f6877", display: "flex", fontSize: 32, marginTop: 16 }}>
-              Full-stack developer building practical systems for communities.
+            <div style={{ color: "#dce9a8", display: "flex", fontSize: 32, marginTop: 16 }}>
+              Systems built for real people.
             </div>
           </div>
 
-          <div style={{ color: "#5f6877", display: "flex", fontFamily: "monospace", fontSize: 22 }}>
+          <div style={{ color: "#d47d58", display: "flex", fontFamily: "monospace", fontSize: 22 }}>
             Next.js · Flutter · Firebase · Supabase
           </div>
         </div>
