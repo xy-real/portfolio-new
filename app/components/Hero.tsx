@@ -1,31 +1,60 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, ExternalLink, GitBranch, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen px-6 py-20 flex items-center justify-center bg-white">
-      {/* Hero content */}
-      <div className="max-w-3xl w-full text-center">
-        <div className="font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-4">Xyryll Jay Taneo</div>
+    <section
+      id="hero"
+      aria-labelledby="hero-title"
+      className="flex min-h-[calc(100svh-4rem)] items-center justify-center bg-white px-6 py-20"
+    >
+      <div className="w-full max-w-4xl text-center">
+        <p className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 sm:text-sm">
+          Full-stack developer · Computer science student · Student leader
+        </p>
+        <h1 id="hero-title" className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-7xl">
+          Xyryll Jay Taneo
+        </h1>
 
-        <div className="text-base sm:text-lg text-gray-500">
-          Junior developer with a passion for building systems that solve real world problems.
-        </div>
+        <p className="mx-auto mt-5 max-w-2xl text-balance text-base leading-relaxed text-gray-600 sm:text-xl">
+          I build practical web and mobile systems for student organizations and community operations.
+        </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 justify-center">
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <a
             href="#projects"
-            className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 flex items-center justify-center gap-2"
+            className="flex items-center justify-center gap-2 rounded-lg bg-black px-6 py-3 text-white transition-colors hover:bg-gray-800"
           >
             View Projects
-            <ArrowRight size={20} />
+            <ArrowRight size={20} aria-hidden="true" />
           </a>
 
           <a
             href="#contact"
-            className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 flex items-center justify-center gap-2"
+            className="flex items-center justify-center gap-2 rounded-lg border border-gray-300 px-6 py-3 transition-colors hover:bg-gray-100"
           >
-            <Mail size={20} />
+            <Mail size={20} aria-hidden="true" />
             Get in touch
+          </a>
+        </div>
+
+        <div className="mt-6 flex items-center justify-center gap-5 text-sm text-gray-600" aria-label="Social profiles">
+          <a
+            href="https://github.com/xy-real"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 transition-colors hover:text-black"
+          >
+            <GitBranch size={18} aria-hidden="true" />
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/xyryll-jay-taneo-600822269/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 transition-colors hover:text-black"
+          >
+            <ExternalLink size={18} aria-hidden="true" />
+            LinkedIn
           </a>
         </div>
       </div>

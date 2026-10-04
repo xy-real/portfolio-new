@@ -1,136 +1,152 @@
 import { ArrowUpRight, Code2 } from "lucide-react";
 import Image from "next/image";
 
-export default function Projects() {
-  const projects = [
-    {
-      title: "USSC Connect",
-      role: "Backend",
-      desc: "Built to streamline administrative overhead for the VSU Supreme Student Council, this platform completely digitalizes organization management. It provides admins with robust tools for tracking attendance and managing member fines, while offering students a frictionless, integrated portal to settle their dues online.",
-      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Typescript"],
-      year: "2026",
-      link: "https://ussc-connect.fc-ssc.online/",
-      image:
-        "/projects/ussc-connect.png",
-    },
-    {
-      title: "VERIS System",
-      role: "Backend",
-      desc: "A general-purpose administrative frontend for the student council and a counterpart to USSC Connect. It connects to the same shared database while providing a broader interface for monitoring student eligibility, organizational fees and fines, and payment settlements across council operations.",
-      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "TypeScript"],
-      year: "2026",
-      link: "https://veris.fc-ssc.online/",
-      image:
-        "/projects/veris-system.png",
-    },
-    {
-      title: "VERIS Student Portal",
-      role: "Backend",
-      desc: "The student-facing side of the VERIS ecosystem. It gives students one place to review their payables from each organization, monitor their clearance status, update their records, and settle dues and fines remotely.",
-      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "TypeScript"],
-      year: "2026",
-      link: "https://veris-student-portal.fc-ssc.online/",
-      image:
-        "/projects/veris-student-portal.png",
-    },
-    {
-      title: "Crisync",
-      role: "Project Manager",
-      desc: "Designed to enhance community safety during severe weather events, this mobile app delivers critical, real-time alerts by directly parsing PAGASA data. Because network reliability drops during disasters, the system is architected with Supabase to provide offline-resilient data synchronization, ensuring users retain access to vital preparedness information even when connectivity is lost.",
-      tech: ["Flutter", "Dart", "Supabase"],
-      year: "2026",
-      link: "https://github.com/xy-real/project_bihon",
-      image:
-        "/projects/crisync.png",
-    },
-    {
-      title: "CORAL System",
-      role: "Backend",
-      desc: "The foundational web application that ultimately inspired USSC Connect. Engineered specifically for the Luring Sirens faction during VSU Intramurals, CORAL replaces slow, paper-based attendance logging with a centralized, online check-in process. It allowed event organizers to easily track student participation and manage data in real-time.",
-      tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Typescript"],
-      year: "2025",
-      link: "https://checka-org.vercel.app/",
-      image:
-        "/projects/coral-project.png",
-    },
-    
-  ];
+type Project = {
+  title: string;
+  role: string;
+  category: string;
+  description: string;
+  tech: string[];
+  year: string;
+  image: string;
+  link?: {
+    href: string;
+    label: string;
+  };
+};
 
+const projects: Project[] = [
+  {
+    title: "USSC Connect",
+    role: "Backend",
+    category: "VERIS ecosystem",
+    description:
+      "I built backend workflows for attendance, member fines, and online payment tracking for the VSU Supreme Student Council. The platform shares its Firebase data layer with the broader VERIS interfaces.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
+    year: "2026",
+    image: "/projects/ussc-connect.webp",
+    link: {
+      href: "https://ussc-connect.fc-ssc.online/",
+      label: "Visit live site",
+    },
+  },
+  {
+    title: "VERIS System",
+    role: "Frontend",
+    category: "VERIS ecosystem",
+    description:
+      "I built a general administrative frontend for the student council. It connects to the same database as USSC Connect and gives council officers a broader interface for student eligibility, organizational charges, and payment settlements.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
+    year: "2026",
+    image: "/projects/veris-system.webp",
+  },
+  {
+    title: "VERIS Student Portal",
+    role: "Frontend",
+    category: "VERIS ecosystem",
+    description:
+      "I built the student-facing side of VERIS, where students can review payables from each organization, monitor their clearance status, update their records, and settle dues and fines remotely.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
+    year: "2026",
+    image: "/projects/veris-student-portal.webp",
+  },
+  {
+    title: "Crisync",
+    role: "Project Manager",
+    category: "Community safety",
+    description:
+      "I coordinated the design of a mobile emergency-preparedness app that parses PAGASA data and keeps critical information available during unreliable connectivity through offline-resilient synchronization.",
+    tech: ["Flutter", "Dart", "Supabase"],
+    year: "2026",
+    image: "/projects/crisync.png",
+    link: {
+      href: "https://github.com/xy-real/project_bihon",
+      label: "View source code",
+    },
+  },
+  {
+    title: "CORAL System",
+    role: "Backend",
+    category: "Event operations",
+    description:
+      "I built backend workflows that replaced paper-based attendance during VSU Intramurals with centralized online check-ins and real-time participation records for event organizers.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
+    year: "2025",
+    image: "/projects/coral-project.webp",
+    link: {
+      href: "https://checka-org.vercel.app/",
+      label: "Visit live site",
+    },
+  },
+];
+
+export default function Projects() {
   return (
-    <section id="projects" className="px-6 py-24 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <div className="flex items-center gap-2 mb-5">
-            <Code2 size={24} />
-            <div className="font-mono text-2xl font-bold">PROJECTS</div>
+    <section id="projects" aria-labelledby="projects-title" className="bg-white px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 max-w-3xl">
+          <div className="mb-4 flex items-center gap-2">
+            <Code2 size={24} aria-hidden="true" />
+            <h2 id="projects-title" className="font-mono text-2xl font-bold">Projects</h2>
           </div>
+          <p className="text-lg leading-relaxed text-gray-600">
+            Selected systems for student services, organizational operations, and community safety. USSC Connect and both VERIS interfaces form one connected platform with a shared data layer.
+          </p>
         </div>
 
-        <div className="space-y-6">
-          {projects.map((project) => {
-            const cardContent = (
-              <>
-                <div className="relative aspect-2/1 overflow-hidden bg-accent">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(min-width: 768px) 768px, 100vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+        <div className="grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-background transition-colors hover:border-gray-400"
+            >
+              <div className="relative aspect-video overflow-hidden bg-accent">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} interface preview`}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+
+              <div className="flex grow flex-col p-6 sm:p-7">
+                <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                  {project.category}
+                </p>
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-2xl font-semibold tracking-tight">{project.title}</h3>
+                  <span className="shrink-0 font-mono text-sm text-muted-foreground">{project.year}</span>
                 </div>
 
-                <div className="p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-2xl font-semibold group-hover:underline">
-                          {project.title}
-                        </h3>
-                        <span className="px-3 py-1 text-xs font-mono bg-foreground text-background rounded-full">
-                          {project.role}
-                        </span>
-                      </div>
-                      <p className="text-muted-foreground mb-4">{project.desc}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tech.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 text-xs rounded-full border border-border font-mono"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground ml-4">
-                      <span>{project.year}</span>
-                      {project.link && (
-                        <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </>
-            );
+                <span className="mt-3 w-fit rounded-full bg-black px-3 py-1 font-mono text-xs text-white">
+                  {project.role}
+                </span>
 
-            return project.link ? (
-              <a
-                key={project.title}
-                href={project.link}
-                className="group block bg-background rounded-2xl border border-border hover:border-foreground transition-all overflow-hidden"
-              >
-                {cardContent}
-              </a>
-            ) : (
-              <article
-                key={project.title}
-                className="block bg-background rounded-2xl border border-border overflow-hidden"
-              >
-                {cardContent}
-              </article>
-            );
-          })}
+                <p className="mt-5 leading-relaxed text-gray-600">{project.description}</p>
+
+                <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>
+                  {project.tech.map((tech) => (
+                    <li key={tech} className="rounded-full border border-border px-3 py-1 font-mono text-xs text-gray-600">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+
+                {project.link && (
+                  <a
+                    href={project.link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-sm font-semibold underline-offset-4 hover:underline"
+                  >
+                    {project.link.label}
+                    <ArrowUpRight size={18} aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
