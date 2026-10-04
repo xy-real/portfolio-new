@@ -18,10 +18,10 @@ type Project = {
 const projects: Project[] = [
   {
     title: "USSC Connect",
-    role: "Backend",
-    category: "VERIS ecosystem",
+    role: "Backend → Lead Backend",
+    category: "VERIS ecosystem · Team project",
     description:
-      "I built backend workflows for attendance, member fines, and online payment tracking for the VSU Supreme Student Council. The platform shares its Firebase data layer with the broader VERIS interfaces.",
+      "The VERIS development team built this council-specific interface for the VSU Supreme Student Council. I started as a backend developer, implementing workflows for attendance, member fines, and online payment tracking, and now lead backend development across the ecosystem.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
     year: "2026",
     image: "/projects/ussc-connect.webp",
@@ -32,20 +32,20 @@ const projects: Project[] = [
   },
   {
     title: "VERIS System",
-    role: "Frontend",
-    category: "VERIS ecosystem",
+    role: "Backend → Lead Backend",
+    category: "VERIS ecosystem · Team project",
     description:
-      "I built a general administrative frontend for the student council. It connects to the same database as USSC Connect and gives council officers a broader interface for student eligibility, organizational charges, and payment settlements.",
+      "The team's general administrative interface gives council officers a broader view of student eligibility, organizational charges, and payment settlements. My contribution focuses on the shared backend and the data flows connecting it to the same database as USSC Connect.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
     year: "2026",
     image: "/projects/veris-system.webp",
   },
   {
     title: "VERIS Student Portal",
-    role: "Frontend",
-    category: "VERIS ecosystem",
+    role: "Backend → Lead Backend",
+    category: "VERIS ecosystem · Team project",
     description:
-      "I built the student-facing side of VERIS, where students can review payables from each organization, monitor their clearance status, update their records, and settle dues and fines remotely.",
+      "The team's student-facing portal lets students review payables across organizations, monitor clearance status, update records, and settle dues and fines remotely. I worked on the backend flows supporting these shared student services.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
     year: "2026",
     image: "/projects/veris-student-portal.webp",
@@ -90,7 +90,7 @@ export default function Projects() {
             <h2 id="projects-title" className="font-mono text-2xl font-bold">Projects</h2>
           </div>
           <p className="text-lg leading-relaxed text-gray-600">
-            Selected systems for student services, organizational operations, and community safety. USSC Connect and both VERIS interfaces form one connected platform with a shared data layer.
+            Selected team and individual systems for student services, organizational operations, and community safety. The VERIS ecosystem is developed by a team; I progressed from backend developer to lead backend developer for the current academic year.
           </p>
         </div>
 
